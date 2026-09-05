@@ -1,0 +1,523 @@
+{
+  "info": {
+    "_postman_id": "80cac774-89e7-4016-bba8-2d80e4ae5190",
+    "name": "Saraha-App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56151874",
+    "_collection_link": "https://go.postman.co/collection/56151874-80cac774-89e7-4016-bba8-2d80e4ae5190?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fname\":\"omar\",\r\n    \"lname\":\"samir\",\r\n    \"email\":\"omarghazalar2r@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"confirmPassword\":\"123\",\r\n    \"age\":20\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Confirm Email",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\",\r\n    \"otp\":\"215333\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/confirm-email",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "confirm-email"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend OTP",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/resend-otp",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "resend-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forget Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/forget-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "forget-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\",\r\n    \"otp\":\"332654\",\r\n    \"newPassword\":\"1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/reset-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forget Pass Link",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"omarghazalar2r@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/forget-password-link",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "forget-password-link"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Pass Link",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New accessToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTkzNTI5MzRiMTNkNDRiNWY5NmU3NjgiLCJqdGkiOiI1YTEzNDJhZC1hNWE1LTQ2MWQtOWE2My0wZDdhMzlmYTFjOWUiLCJpYXQiOjE3ODg2MTE0MjYsImV4cCI6MTc4ODYxMTU0NiwiaXNzIjoiU2FyYWhhLUFwcCJ9.wR3itfUUW5RD5r0ojwOEJleqarSyy6OOIiGXslFb9cE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/auth/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTdiOWU2MjU0ZDBhMGJmNzQwMjA3MGQiLCJpYXQiOjE3ODc1Nzc1MTcsImV4cCI6MTc4NzU4MTExNywiaXNzIjoiU2FyYWhhLUFwcCJ9.QN_exnh0SMPENbfcZ8KEIa-btraMYxkm_bQxuinZrwg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTdiOWU2MjU0ZDBhMGJmNzQwMjA3MGQiLCJpYXQiOjE3ODcwODEyNTMsImV4cCI6MTc4NzA4NDg1MywiaXNzIjoiU2FyYWhhLUFwcCJ9.PaMgQALc9qGDp-Zlh0RVcy2Gl0EExQ87qzcPAUghOqs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/user/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "user",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTdiOWMyOTFkYmRjYzY4NWE1NDMzZjUiLCJpYXQiOjE3ODcwODA0MTEsImV4cCI6MTc4NzA4NDAxMSwiaXNzIjoiU2FyYWhhLUFwcCJ9.nMf5hBVokywUjEznd3MZi1b9WPG-4QUOI_cVelMaCbs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"age\":15\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/6a7b9e6254d0a0bf7402070d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "user",
+                "6a7b9e6254d0a0bf7402070d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Profile Image",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTdiOWU2MjU0ZDBhMGJmNzQwMjA3MGQiLCJpYXQiOjE3ODc1Mjg0NTksImV4cCI6MTc4NzUzMjA1OSwiaXNzIjoiU2FyYWhhLUFwcCJ9.ozOP0RkjlyLnRMK1w7VGzhatBX36YBtGd89Hf3yTS-8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "profile",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/moham/Pictures/Screenshots/Screenshot 2025-11-16 140331.png"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/update-image",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "user",
+                "update-image"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Messages",
+      "item": [
+        {
+          "name": "Get Messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Messages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTkzNTI5MzRiMTNkNDRiNWY5NmU3NjgiLCJqdGkiOiI2MjRjOWM3OS0yMjM3LTQ4ZTMtYmZkNi1kNmY4ZjFiNWViNmYiLCJpYXQiOjE3ODg1NjA2ODEsImV4cCI6MTc4ODU2NDI4MSwiaXNzIjoiU2FyYWhhLUFwcCJ9.gBULaeJP4BQ-RQ4iduJxR4jJWLJn30yKVgXDs82SPhs",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "attachments",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/moham/Pictures/Screenshots/test-photo.png"
+                  ]
+                },
+                {
+                  "key": "email",
+                  "value": "omar@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "content",
+                  "value": "Test Send Messages API",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/messages/send",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "user",
+                "messages",
+                "send"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reply",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTdiOWMyOTFkYmRjYzY4NWE1NDMzZjUiLCJqdGkiOiJkYWEwYjg4Zi1hZjU3LTRkZTMtYmE3My05ZDFjMDk2MDA2ZjYiLCJpYXQiOjE3ODg1NjEyMTYsImV4cCI6MTc4ODU2NDgxNiwiaXNzIjoiU2FyYWhhLUFwcCJ9.TyzcqqIN_hvxqxL53t2OisZFThb635qCtOvK9ps-e7Y",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "content",
+                  "value": "Reply test with photo",
+                  "type": "text"
+                },
+                {
+                  "key": "attachments",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/moham/Pictures/Screenshots/test-photo.png"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/messages/6a9b46e2231a8964a9c58543/reply",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "user",
+                "messages",
+                "6a9b46e2231a8964a9c58543",
+                "reply"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
