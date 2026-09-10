@@ -2,7 +2,10 @@ import { Router } from "express";
 import { auth } from "../../middleware/auth.middleware.js";
 import { getMessages, replyMessage, sendMessage } from "./message.service.js";
 import { successResponse } from "../../common/response/success-response.js";
-import { checkEmptyMessage, validate } from "../../middleware/validator.middleware.js";
+import {
+  checkEmptyMessage,
+  validate,
+} from "../../middleware/validator.middleware.js";
 import { replyMessageSchema, sendMessageSchema } from "./message.validation.js";
 import localUpload, { fileValidation } from "../../common/utils/multer.js";
 
@@ -46,6 +49,7 @@ messageRouter.post(
     fileValidation: fileValidation.image,
   }).array("attachments", 4),
   validate(replyMessageSchema),
+  checkEmptyMessage,
   async (req, res) => {
     const { content } = req.body;
     const { messageId } = req.params;
